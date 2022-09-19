@@ -12,15 +12,14 @@ public class FMLEvent {
     @SubscribeEvent
     public void tick(TickEvent.ClientTickEvent e) {
 
-        if (sphereTimer >= 30 && flag1) {
+        if (sphereTimer >= 30 && flag1)
             flag1 = false;
-        } else if (sphereTimer == 0 && !flag1) {
+        else if (sphereTimer == 0 && !flag1)
             flag1 = true;
-        }
-        if (!flag1) {
+        if (!flag1)
             sphereTimer--;
-        } else {
+        else 
             sphereTimer++;
-        }
+        
     }
 }
