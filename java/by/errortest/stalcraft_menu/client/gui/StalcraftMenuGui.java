@@ -67,11 +67,19 @@ public class StalcraftMenuGui extends GuiScreen {
         for (k = 0; k < this.buttonList.size(); ++k) {
             this.buttonList.get(k).drawButton(this.mc, var1, var2);
         }
-
-        for (k = 0; k < this.labelList.size(); ++k) {
-            this.labelList.get(k).func_146159_a(this.mc, var1, var2);
+    }
+    
+    public void updateScreen() {
+        if (sphereTimer >= 30 && flag1) {
+            flag1 = false;
+        } else if (sphereTimer == 0 && !flag1) {
+            flag1 = true;
         }
-
+        if (!flag1) {
+            sphereTimer--;
+        } else {
+            sphereTimer++;
+        }
     }
 
     void drawFullScreenTexture(ResourceLocation resourceLocation) {
