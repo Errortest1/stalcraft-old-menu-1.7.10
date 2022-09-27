@@ -1,6 +1,5 @@
 package by.errortest.stalcraft_menu;
 
-import by.errortest.stalcraft_menu.client.FMLEvent;
 import by.errortest.stalcraft_menu.client.ForgeEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -18,7 +17,6 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new ForgeEvent());
-        FMLCommonHandler.instance().bus().register(new FMLEvent());
         super.init(event);
     }
 
